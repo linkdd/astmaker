@@ -1,0 +1,21 @@
+[package]
+name = "astmaker"
+version = "0.1.0"
+
+description = "Build Abstract Syntax Trees and tree-walking models quickly in Rust."
+keywords = ["ast", "abstract", "syntax", "tree", "walk"]
+
+homepage = "https://github.com/linkdd/astmaker"
+repository = "https://github.com/linkdd/astmaker"
+
+license = "MIT"
+readme = "README.md"
+
+edition = "2021"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { version = "2.0", features = ["full", "fold"] }
+quote = "1.0"
