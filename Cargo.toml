@@ -1,6 +1,6 @@
 [package]
 name = "astmaker"
-version = "0.1.0"
+version = "0.1.1"
 
 description = "Build Abstract Syntax Trees and tree-walking models quickly in Rust."
 keywords = ["ast", "abstract", "syntax", "tree", "walk"]
