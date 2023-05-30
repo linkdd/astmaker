@@ -51,7 +51,7 @@ pub fn generate(input: TokenStream) -> TokenStream {
         let fields = data.members
           .iter()
           .map(|NodeDataStructField { name, datatype }| quote!{
-            #name : #datatype
+            pub #name : #datatype
           });
 
         quote!{
