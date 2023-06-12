@@ -42,7 +42,7 @@ ast!{
 pub struct Interpreter;
 
 model!{
-  for Interpreter -> f64 {
+  impl Interpreter -> f64 {
     where Expression => {
       match node.data.as_mut() {
         Expression::BinOp(child_node) => context.visit(child_node),

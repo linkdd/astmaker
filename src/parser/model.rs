@@ -1,9 +1,10 @@
 use syn::parse::{Parse, ParseStream, Result};
-use syn::{Token, Type, Expr, braced};
+use syn::*;
 
 
 pub struct Model {
   pub context: Type,
+  pub generics: Generics,
   pub output: Type,
   pub clauses: Vec<Clause>,
 }
@@ -15,7 +16,9 @@ pub struct Clause {
 
 impl Parse for Model {
   fn parse(input: ParseStream) -> Result<Self> {
-    input.parse::<Token![for]>()?;
+    input.parse::<Token![impl]>()?;
+
+    let generics: Generics = input.parse()?;
 
     let context: Type = input.parse()?;
 
@@ -31,7 +34,7 @@ impl Parse for Model {
       .into_iter()
       .collect();
 
-    Ok(Self { context, output, clauses })
+    Ok(Self { context, generics, output, clauses })
   }
 }
 

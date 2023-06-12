@@ -52,7 +52,7 @@ ast!{
 pub struct Interpreter;
 
 model!{
-  for Interpreter -> f64 {
+  impl Interpreter -> f64 {
     where Expression => {
       match node.data.as_mut() {
         Expression::BinOp(child_node) => context.visit(child_node),
@@ -106,8 +106,8 @@ fn eval() {
 ## Roadmap
 
  - [ ] :memo: Documentation
- - [ ] :sparkles: Generics support
- - [ ] :sparkles: Lifetimes support
+ - [x] :sparkles: Generics support
+ - [x] :sparkles: Lifetimes support
  - [ ] :construction_worker: Github workflows to build, test & publish crate
 
 ## License
