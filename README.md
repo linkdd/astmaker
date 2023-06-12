@@ -1,5 +1,10 @@
 # astmaker
 
+[![Crates.io](https://img.shields.io/crates/v/astmaker?style=flat-square)](https://crates.io/crates/astmaker)
+[![Crates.io](https://img.shields.io/crates/l/astmaker?style=flat-square)](https://crates.io/crates/astmaker)
+[![Crates.io](https://img.shields.io/crates/d/astmaker?style=flat-square)](https://crates.io/crates/astmaker)
+[![docs.rs](https://img.shields.io/docsrs/astmaker?style=flat-square)](https://docs.rs/astmaker)
+
 Build Abstract Syntax Trees and tree-walking models quickly in Rust.
 
 ## Example
@@ -105,7 +110,7 @@ fn eval() {
 
 ## Roadmap
 
- - [ ] :memo: Documentation
+ - [x] :memo: Documentation
  - [x] :sparkles: Generics support
  - [x] :sparkles: Lifetimes support
  - [ ] :construction_worker: Github workflows to build, test & publish crate
